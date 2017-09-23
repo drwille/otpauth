@@ -1,3 +1,6 @@
+/**
+ * Copyright (C) Daniel Wille, 2017
+ */
 package net.drwille.otpauth;
 
 import java.io.BufferedReader;
