@@ -17,7 +17,9 @@ public class OTPAuth {
 		for (OTPAuthURI authURI : authURIs) {
 			byte[] key = Base32String.decode(authURI.getSecret());
 			int code = new HTOP(key).getTimeBasedCode(6, 30);
-			System.out.println(code + "  " + authURI.email);
+
+			String msg = String.format("%06d  %s", code, authURI.email);
+			System.out.println(msg);
 		}
 	}
 
